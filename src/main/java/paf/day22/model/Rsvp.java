@@ -3,7 +3,7 @@ package paf.day22.model;
 import java.sql.Date;
 
 public class Rsvp {
-    private int id;
+    //private int id;
     private String name;
     private String email; 
     private String phone;
@@ -11,8 +11,7 @@ public class Rsvp {
     private String comments;
 
     public Rsvp() {}
-    public Rsvp(int id, String name, String email, String phone, Date confirmation_date, String comments) {
-        this.id = id;
+    public Rsvp(String name, String email, String phone, Date confirmation_date, String comments) {
         this.name = name;
         this.email = email;
         this.phone = phone;
@@ -22,15 +21,10 @@ public class Rsvp {
 
     @Override
     public String toString() {
-        return "Rsvp [id=" + id + ", name=" + name + ", email=" + email + ", phone=" + phone + ", confirmation_date="
+        return "Rsvp [name=" + name + ", email=" + email + ", phone=" + phone + ", confirmation_date="
                 + confirmation_date + ", comments=" + comments + "]";
     }
-    public int getId() {
-        return id;
-    }
-    public void setId(int id) {
-        this.id = id;
-    }
+
     public String getName() {
         return name;
     }
